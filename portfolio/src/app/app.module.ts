@@ -12,6 +12,8 @@ import { EducacionComponent } from './componentes/educacion/educacion.component'
 import {HttpClientModule} from '@angular/common/http';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
+import { ProyectoItemComponent } from './componentes/proyecto-item/proyecto-item.component';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AptitudesComponent,
     LogrosComponent,
     EducacionComponent,
-    FooterComponent
+    FooterComponent,
+    ProyectosComponent,
+    ProyectoItemComponent
   ],
   imports: [
     BrowserModule,

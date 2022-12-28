@@ -1,0 +1,20 @@
+    <div class="grid">
+        <figure class="effect-bubba">
+            <a href="#" class="overlay"><img [src]="proyecto.figura" alt="" /></a>
+            <!-- <img src="/images/covid43.jpg" alt="">  -->
+            <figcaption>
+                <h3>{{proyecto.numero}}</h3>
+                <h3>{{proyecto.numero}} </h3>
+                <h2>{{proyecto.titulo}}<span>{{proyecto.titulo2}}</span></h2>
+                <p>{{proyecto.descrip}}</p>
+                <!-- <div class="overlay"></div> -->
+                <!-- <a href="#">View more</a> -->
+            </figcaption>
+        </figure>
+    </div>
+    <div class="logrosfoot">
+        <a href="" target="_blank" class="special">Learn more</a>
+        <fa-icon class="cross" [icon]="faTimes" (click)="onDelete()">
+
+        </fa-icon>
+</div>
