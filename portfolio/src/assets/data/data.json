@@ -1,0 +1,49 @@
+{
+    "name": "Lorenzo Erra",
+    "description": "DATA ANALYST WELL VERSED IN PYTHON, R, SCIENCE",
+    "logo": "/assets/images/logo.png",
+    "acerca-de":{
+        "titulo":"Full Stack Developer Jr",
+        "description": "En esta sección debes poner información profesional resumida sobre vos."
+    },
+
+    "education": [
+        {
+            "name": "Experiencia",
+            "descrip": "Aquí colocarás toda la información de los lugares donde has trabajado,incluyendo Titulo del puesto, periodo, logo de la empresa si lo encuentras, y descripción de las actividades realizadas en ese puesto" },
+        {
+            "name": "Educacion",
+            "descrip": "Escribir toda la información de tu formación académica, certificaciones, cursos,y todo lo relacionado al título que actualmente cuentas, es importante detallar la información del instituto, el logo de ser posible, nombre, carrera o título estudiado, y en qué periodo o año."
+        }
+        ],
+    "logros": [
+        {
+            "figura": "/assets/images/ezgif-2-f359272619.gif",
+            "numero": "01",
+            "titulo": "Gas ",
+            "titulo2": "Emision",
+            "descrip": "Emision NO2 in Argentina"
+        },
+        {
+            "figura": "/assets/images/covid43.jpg",
+            "numero": "02",
+            "titulo": "COVID-19 ",
+            "titulo2": "Track",
+            "descrip": "COVID-19 tracking in Argentina"
+        },
+        {
+            "figura": "/assets/images/arq43.jpeg",
+            "numero": "03",
+            "titulo": "Proyect ",
+            "titulo2": "DLE",
+            "descrip": "ARQ Web Portfolio "
+        },
+        {
+            "figura": "/assets/images/arq43.jpeg",
+            "numero": "04",
+            "titulo": "Proyect ",
+            "titulo2": "HOTEL",
+            "descrip": "Hotel Web"
+        }
+    ]
+}

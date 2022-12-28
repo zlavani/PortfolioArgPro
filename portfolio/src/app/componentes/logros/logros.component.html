@@ -1,0 +1,45 @@
+<!-- ANGULAAAAAR -->
+
+<section id="four" class="wrapper alt style1">
+    
+    <div class="inner editado">
+        <h2 class="major">Proyects</h2>
+        <app-boton text="Menu" (btnClick)="toggleAddTask()"></app-boton>
+        
+        <p>Lorem</p>
+        <section class="features2">
+            <!-- Emision de Gases -->
+            <ng-container *ngFor="let logro of logrosList">
+            <article>
+                <div class="grid">
+                        <figure class="effect-bubba">
+                            <a href="#" class="overlay"><img [src]="logro.figura" alt="" /></a>
+                            <!-- <img src="/images/covid43.jpg" alt="">  -->
+                            <figcaption>
+                                <h3>{{logro.numero}}</h3>
+                                <h3>{{logro.numero}} </h3>
+                                <h2>{{logro.titulo}}<span>{{logro.titulo2}}</span></h2>
+                                <p>{{logro.descrip}}</p>
+                                <!-- <div class="overlay"></div> -->
+                                <!-- <a href="#">View more</a> -->
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="logrosfoot">
+                        <a href="" target="_blank" class="special">Learn more</a>
+                        <fa-icon  
+                            class="cross"
+                            [icon]="faTimes"
+                            (click)="onDelete()"
+                        >
+
+                        </fa-icon>
+                    </div>
+                </article>
+            </ng-container>
+        </section>
+        <ul class="actions">
+            <li><a href="#" class="button">Browse All</a></li>
+        </ul>
+    </div>
+</section>
