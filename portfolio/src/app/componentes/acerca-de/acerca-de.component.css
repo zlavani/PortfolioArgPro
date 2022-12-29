@@ -1,0 +1,35 @@
+.wrapper.spotlight .image img {
+    border-radius: 100%;
+    width: 100%;
+}
+
+.imageacerca {
+   /* border-radius: 5px;
+    height: 50%;
+    display: block;
+    border-radius: 5px;
+        display: block;
+          */
+}
+
+.imageacerca {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    margin-left: 5%;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.imageacerca img {
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+}
+
+.inner{
+    /* margin: 0% 5%; */
+    /* height: 100%; */
+    /* border: 1px dashed red; */
+}

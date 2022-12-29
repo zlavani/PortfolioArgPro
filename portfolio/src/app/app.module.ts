@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+// 2:12 
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,8 +18,16 @@ import { ProyectosComponent } from './componentes/proyectos/proyectos.component'
 import { ProyectoItemComponent } from './componentes/proyecto-item/proyecto-item.component';
 import { AgregarProyectoComponent } from './componentes/agregar-proyecto/agregar-proyecto.component';
 import { FormsModule } from '@angular/forms';
+import { InfoProyectosComponent } from './componentes/info-proyectos/info-proyectos.component';
+import { InfoGeneralComponent } from './componentes/info-general/info-general.component';
 
+const appRoutes: Routes = [
+  { path: '', component: HeaderComponent },
+  // { path: '', component: AcercaDeComponent },
+  { path: 'infogeneral', component: InfoGeneralComponent },
 
+  { path: 'infoproyectos', component: InfoProyectosComponent}
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,14 +40,17 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     ProyectosComponent,
     ProyectoItemComponent,
-    AgregarProyectoComponent
+    AgregarProyectoComponent,
+    InfoProyectosComponent,
+    InfoGeneralComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FontAwesomeModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes, { enableTracing: true })
   ],
   providers: [],
   bootstrap: [AppComponent]

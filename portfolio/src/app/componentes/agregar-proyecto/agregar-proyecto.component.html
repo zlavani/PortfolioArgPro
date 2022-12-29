@@ -1,4 +1,8 @@
-<form class="add-form" (ngSubmit)="onSubmit()">
+<form 
+    class="add-form" 
+    (ngSubmit)="onSubmit()" 
+    *ngIf="showAddLogro"
+    >
     <div class="form-control">
         <label for="titulo">Proyecto</label>
         <input 

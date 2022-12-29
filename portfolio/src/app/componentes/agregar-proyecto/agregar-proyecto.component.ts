@@ -1,5 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Logro } from 'src/app/Logro';
+import { UiService } from 'src/app/servicios/ui.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-agregar-proyecto',
@@ -13,8 +15,14 @@ export class AgregarProyectoComponent implements OnInit {
   titulo: string= "";
   titulo2: string= "";
   descrip: string= "";
+  showAddLogro: boolean = false;
+  subscription?: Subscription;
+
   
-  constructor() { }
+  constructor(private uiService: UiService) {
+    this.subscription = this.uiService.onToggle().subscribe(value => this.showAddLogro = value)
+  }
+
 
   ngOnInit(): void {
   }

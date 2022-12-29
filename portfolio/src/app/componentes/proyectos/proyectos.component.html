@@ -3,7 +3,10 @@
     <div class="inner editado">
         <h2 class="major">Proyects</h2>
         <div class="agregar-proyecto-btn">
-            <app-boton text="Agregar Proyecto" (btnClick)="toggleAddTask()"></app-boton>
+            <app-boton 
+                text="{{showAddLogro? 'Cerrar proyecto':'Agregar proyecto'}}" 
+                color="{{showAddLogro? 'red':'green'}}" 
+                (btnClick)="toggleAddLogro()"></app-boton>
         </div>
         <app-agregar-proyecto (onAddLogro)="addLogro($event)"></app-agregar-proyecto>
         <p>Lorem</p>
@@ -20,9 +23,8 @@
         </section>
         
         <div class="boton_final">
-
             <ul class="actions">
-                <li><a href="#" class="button">Browse All</a></li>
+                <li><a routerLink="/infoproyectos" class="button">Browse All</a></li>
             </ul>
         </div>
     </div>

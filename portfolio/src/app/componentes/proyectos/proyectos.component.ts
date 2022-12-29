@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { Logro } from 'src/app/Logro';
- 
+import { UiService } from 'src/app/servicios/ui.service';
+import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-proyectos',
   templateUrl: './proyectos.component.html',
@@ -9,15 +12,27 @@ import { Logro } from 'src/app/Logro';
 })
 export class ProyectosComponent implements OnInit {
   proyectos: Logro[] = [];
+  showAddLogro: boolean = false;
+  subscription?: Subscription;
 
-  constructor(private portfolioService: PortfolioService) { }
+
+  constructor(
+    private portfolioService: PortfolioService,
+    private uiService: UiService,
+    private router: Router
+  
+    ) {
+      this.subscription = this.uiService.onToggle().subscribe(value => this.showAddLogro = value)
+
+     }
+  
 
   ngOnInit(): void {
     this.portfolioService.getLogros().subscribe((logros) => {
       this.proyectos = logros;});
   }
-  toggleAddTask() {
-    console.log
+  toggleAddLogro() {
+    this.uiService.toggleAddLogro();
   }
   
   deleteLogro(logro:Logro){
