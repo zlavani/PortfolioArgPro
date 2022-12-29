@@ -6,3 +6,15 @@
     /* margin-left: 10px; */
     /* border: 1px dashed lightblue; */
 }
+
+.boton_final{
+    display: flex;
+    margin-top: 20%;
+    justify-content: center;
+    margin-right: 3%;
+}
+
+.agregar-proyecto-btn{
+    display: flex;
+    justify-content: end
+}

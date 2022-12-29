@@ -19,4 +19,20 @@ export class ProyectosComponent implements OnInit {
   toggleAddTask() {
     console.log
   }
+  
+  deleteLogro(logro:Logro){
+    this.portfolioService.deleteLogro(logro)
+      .subscribe(
+        () => (
+          this.proyectos = this.proyectos.filter((t) => {
+              return t.id !== logro.id
+          })
+      )) 
+  }
+  addLogro(logro: Logro) {
+    console.log(logro)
+    this.portfolioService.addLogro(logro).subscribe((logro) =>
+      this.proyectos.push(logro))
+  } 
+
 }

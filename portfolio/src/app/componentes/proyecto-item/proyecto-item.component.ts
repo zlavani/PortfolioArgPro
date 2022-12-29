@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input,Output,EventEmitter } from '@angular/core';
 import { LOGROS } from 'src/app/mock-logros';
 import { Logro } from 'src/app/Logro';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
@@ -10,17 +10,19 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 })
 export class ProyectoItemComponent implements OnInit {
   @Input() proyecto: Logro=LOGROS[0]
+  @Output() onDeleteLogro:EventEmitter<Logro> = new EventEmitter()
   faTimes = faTimes;
 
   constructor() { }
 
   ngOnInit(): void {
   }
-  onDelete() {
-    console.log("Delete")
+  onDelete(proyecto: Logro) {
+    console.log(proyecto)
+    this.onDeleteLogro.emit(proyecto);
   }
   toggleAddTask() {
-    console.log
+    console.log("Delete")
   }
 
 }

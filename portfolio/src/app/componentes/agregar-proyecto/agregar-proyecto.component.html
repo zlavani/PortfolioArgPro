@@ -1,0 +1,29 @@
+<form class="add-form" (ngSubmit)="onSubmit()">
+    <div class="form-control">
+        <label for="titulo">Proyecto</label>
+        <input 
+            type="text" 
+            name="titulo" 
+            id="titulo" 
+            placeholder="Agregar primer palabra del proyecto"
+            [(ngModel)]="titulo"
+            >
+    </div>
+    <div class="form-control">
+        <label for="titulo2"></label>
+        <input type="text" name="titulo2" id="titulo2" placeholder="Agregar segunda palabra del proyecto" [(ngModel)]="titulo2">
+    </div>
+    <div class="form-control">
+        <label for="descrip">Descripcion</label>
+        <input type="text" name="descrip" id="descrip" placeholder="Agregar descripcion del proyecto"[(ngModel)]="descrip">
+    </div>
+    <div class="form-control">
+        <label for="figura">Figura</label>
+        <input type="text" name="figura" id="figura" placeholder="Agregar figura del proyecto"[(ngModel)]="figura">
+    </div>
+    <div class="form-control">
+        <label for="numero">Numero de proyecto</label>
+        <input type="text" name="numero" id="numero" placeholder="Agregar numero del proyecto" [(ngModel)]="numero">
+    </div>
+    <input type="submit" value="Guardar Proyecto" class="btn btn-block">
+</form>

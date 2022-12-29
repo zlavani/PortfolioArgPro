@@ -2,17 +2,28 @@
 <section id="four" class="wrapper alt style1">
     <div class="inner editado">
         <h2 class="major">Proyects</h2>
-        <app-boton text="Menu" (btnClick)="toggleAddTask()"></app-boton>
+        <div class="agregar-proyecto-btn">
+            <app-boton text="Agregar Proyecto" (btnClick)="toggleAddTask()"></app-boton>
+        </div>
+        <app-agregar-proyecto (onAddLogro)="addLogro($event)"></app-agregar-proyecto>
         <p>Lorem</p>
         <section class="features2">
             <article>
-                <app-proyecto-item class= "proyecto-item-css" *ngFor="let proyecto2 of proyectos" [proyecto]="proyecto2">
+                <app-proyecto-item 
+                    class= "proyecto-item-css" 
+                    *ngFor="let proyecto of proyectos" 
+                    [proyecto]="proyecto"
+                    (onDeleteLogro)="deleteLogro(proyecto)"
+                    >
                 </app-proyecto-item>
             </article>
-
         </section>
-        <ul class="actions">
-            <li><a href="#" class="button">Browse All</a></li>
-        </ul>
+        
+        <div class="boton_final">
+
+            <ul class="actions">
+                <li><a href="#" class="button">Browse All</a></li>
+            </ul>
+        </div>
     </div>
 </section>

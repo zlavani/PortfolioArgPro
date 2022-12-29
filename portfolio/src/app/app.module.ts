@@ -14,6 +14,8 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { ProyectoItemComponent } from './componentes/proyecto-item/proyecto-item.component';
+import { AgregarProyectoComponent } from './componentes/agregar-proyecto/agregar-proyecto.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -27,13 +29,15 @@ import { ProyectoItemComponent } from './componentes/proyecto-item/proyecto-item
     EducacionComponent,
     FooterComponent,
     ProyectosComponent,
-    ProyectoItemComponent
+    ProyectoItemComponent,
+    AgregarProyectoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
